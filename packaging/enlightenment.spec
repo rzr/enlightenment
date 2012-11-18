@@ -35,6 +35,7 @@ BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(udev)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
+BuildRequires:  pkgconfig(xcb-keysyms)
 
 Source1:	e17.service
 %description
