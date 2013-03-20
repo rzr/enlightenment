@@ -1,18 +1,16 @@
 Name:           enlightenment
-Version:        0.17.0
+Version:        0.17.1
 Release:        1
 License:        BSD 2-clause
 Summary:        The Enlightenment window manager
 Url:            http://www.enlightenment.org/
-Group:          Graphics/X11
+Group:          Graphics/EFL
 Source0:        enlightenment-%{version}.tar.bz2
 BuildRequires:  doxygen
-#BuildRequires:  valgrind
 BuildRequires:  fdupes
 BuildRequires:  gettext
 BuildRequires:  pam-devel
 BuildRequires:  pkgconfig(alsa)
-#BuildRequires:  pkgconfig(librsvg-2.0)
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ecore)
 BuildRequires:  pkgconfig(ecore-con)
@@ -36,8 +34,8 @@ BuildRequires:  pkgconfig(udev)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xcb-keysyms)
-
 Source1:	e17.service
+
 %description
 Enlightenment is a window manager.
 
@@ -79,10 +77,11 @@ ln -s ../e17.service %{buildroot}%{_unitdir_user}/core-efl.target.wants/e17.serv
 %fdupes  %{buildroot}/%{_libdir}/enlightenment
 %fdupes  %{buildroot}/%{_datadir}/enlightenment
 
+%lang_package
 
-%files -f enlightenment.lang
+%files 
 %defattr(-,root,root,-)
-%doc COPYING
+%license COPYING
 %config %{_sysconfdir}/enlightenment/sysactions.conf
 %{_bindir}/enlightenment*
 %{_libdir}/enlightenment/*
