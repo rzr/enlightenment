@@ -964,7 +964,10 @@ AC_E_OPTIONAL_MODULE([access], true)
 AC_E_OPTIONAL_MODULE([music_control], true, [CHECK_MODULE_MUSIC_CONTROL])
 AC_E_OPTIONAL_MODULE([contact], true)
 AC_E_OPTIONAL_MODULE([wl_x11], true, [CHECK_MODULE_WL_X11])
+<<<<<<< HEAD
 AC_E_OPTIONAL_MODULE([wl_desktop], true, [CHECK_MODULE_WL_DESKTOP])
+=======
+>>>>>>> 140c1f3... Add wl_x11 module to configure.
 AC_E_OPTIONAL_MODULE([wl_desktop_shell], true, [CHECK_MODULE_WL_DESKTOP_SHELL])
 AC_E_OPTIONAL_MODULE([wl_screenshot], true, [CHECK_MODULE_WL_SCREENSHOT])
 
