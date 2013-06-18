@@ -35,6 +35,7 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xcb-keysyms)
 Source1:	e17.service
+BuildRequires:  eet-tools
 
 %description
 Enlightenment is a window manager.
