@@ -20,7 +20,7 @@ BuildRequires:  pkgconfig(ecore-file)
 BuildRequires:  pkgconfig(ecore-input)
 BuildRequires:  pkgconfig(ecore-input-evas)
 BuildRequires:  pkgconfig(ecore-ipc)
-BuildRequires:  pkgconfig(ecore-x)
+#BuildRequires:  pkgconfig(ecore-x)
 BuildRequires:  pkgconfig(edbus)
 BuildRequires:  pkgconfig(edje)
 BuildRequires:  pkgconfig(eet)
@@ -56,8 +56,9 @@ cp %{SOURCE1001} .
 
 %build
 
-%configure  --enable-device-udev \
-	    --enable-mount-eeze  \
+%reconfigure \
+        --enable-device-udev \
+        --enable-mount-eeze  \
         --enable-comp
 make %{?_smp_mflags}
 
