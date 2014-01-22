@@ -1,4 +1,4 @@
-Name:           enlightenment
+ecName:           enlightenment
 Version:        0.18.2
 Release:        0
 License:        BSD 2-clause
@@ -20,7 +20,7 @@ BuildRequires:  pkgconfig(ecore-file)
 BuildRequires:  pkgconfig(ecore-input)
 BuildRequires:  pkgconfig(ecore-input-evas)
 BuildRequires:  pkgconfig(ecore-ipc)
-BuildRequires:  pkgconfig(ecore-x)
+#BuildRequires:  pkgconfig(ecore-x)
 BuildRequires:  pkgconfig(edbus)
 BuildRequires:  pkgconfig(edje)
 BuildRequires:  pkgconfig(eet)
