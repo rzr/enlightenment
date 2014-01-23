@@ -29,6 +29,8 @@ BuildRequires:  pkgconfig(efreet)
 BuildRequires:  pkgconfig(eina)
 BuildRequires:  pkgconfig(eio)
 BuildRequires:  pkgconfig(evas)
+BuildRequires:  pkgconfig(elementary)
+BuildRequires:  pkgconfig(emotion)
 BuildRequires:  pkgconfig(ice)
 BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(udev)
@@ -57,10 +59,14 @@ cp %{SOURCE1001} .
 %build
 
 %reconfigure \
-        --enable-device-udev \
-        --enable-mount-eeze  \
-        --enable-comp
-make %{?_smp_mflags}
+    --enable-device-udev \
+    --enable-mount-eeze  \
+    --enable-comp \
+    --enable-wayland-only \
+    --enable-wayland-clients \
+    #eol
+
+make %{?_smp_mflags} -k
 
 %install
 %make_install

@@ -105,7 +105,13 @@ void *alloca (size_t);
 # include <Evas_Engine_Buffer.h>
 # include <Ecore.h>
 # include <Ecore_Getopt.h>
-# include <Ecore_X.h>
+
+# ifdef HAVE_ECORE_X
+#  include <Ecore_X.h>
+# else
+#  include "Ecore_X.h" //TODO: workaround
+# endif 
+
 # include <Ecore_Evas.h>
 # include <Ecore_Input.h>
 # include <Ecore_Input_Evas.h>

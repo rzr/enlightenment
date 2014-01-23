@@ -487,7 +487,6 @@ PKG_CHECK_MODULES(E_GRABBER, [
   ecore >= ${efl_version}
   eet >= ${efl_version}
   efreet >= ${efl_version}
-  ecore-x >= ${efl_version}
 ])
 
 efm_requires="\
@@ -541,7 +540,6 @@ PKG_CHECK_MODULES(E_ALERT, [
 PKG_CHECK_MODULES(E, [
   evas >= ${efl_version}
   ecore >= ${efl_version}
-  ecore-x >= ${efl_version}
   ecore-evas >= ${efl_version}
   ecore-input >= ${efl_version}
   ecore-input-evas >= ${efl_version}
@@ -566,7 +564,6 @@ PKG_CHECK_MODULES(E, [
 requirements_e="\
 evas >= ${efl_version} \
 ecore >= ${efl_version} \
-ecore-x >= ${efl_version} \
 ecore-evas >= ${efl_version} \
 ecore-con >= ${efl_version} \
 ecore-ipc >= ${efl_version} \
@@ -964,10 +961,7 @@ AC_E_OPTIONAL_MODULE([access], true)
 AC_E_OPTIONAL_MODULE([music_control], true, [CHECK_MODULE_MUSIC_CONTROL])
 AC_E_OPTIONAL_MODULE([contact], true)
 AC_E_OPTIONAL_MODULE([wl_x11], true, [CHECK_MODULE_WL_X11])
-<<<<<<< HEAD
 AC_E_OPTIONAL_MODULE([wl_desktop], true, [CHECK_MODULE_WL_DESKTOP])
-=======
->>>>>>> 140c1f3... Add wl_x11 module to configure.
 AC_E_OPTIONAL_MODULE([wl_desktop_shell], true, [CHECK_MODULE_WL_DESKTOP_SHELL])
 AC_E_OPTIONAL_MODULE([wl_screenshot], true, [CHECK_MODULE_WL_SCREENSHOT])
 
