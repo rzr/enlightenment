@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           enlightenment
 Version:        0.18.2
 Release:        0
@@ -20,7 +22,7 @@ BuildRequires:  pkgconfig(ecore-file)
 BuildRequires:  pkgconfig(ecore-input)
 BuildRequires:  pkgconfig(ecore-input-evas)
 BuildRequires:  pkgconfig(ecore-ipc)
-#BuildRequires:  pkgconfig(ecore-x)
+BuildRequires:  pkgconfig(ecore-x)
 BuildRequires:  pkgconfig(edbus)
 BuildRequires:  pkgconfig(edje)
 BuildRequires:  pkgconfig(eet)
@@ -37,6 +39,11 @@ BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xcb-keysyms)
 Source1:	e17.service
 BuildRequires:  eet-tools
+
+%if !%{with x}
+ExclusiveArch:
+%endif
+
 
 %description
 Enlightenment is a window manager.
