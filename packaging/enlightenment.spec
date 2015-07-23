@@ -1,6 +1,6 @@
 Name:           enlightenment
-Version:        0.17.0
-Release:        1
+Version:        0.19.0+rc3
+Release:        0
 License:        BSD 2-clause
 Summary:        The Enlightenment window manager
 Url:            http://www.enlightenment.org/
@@ -55,7 +55,7 @@ Development files for enlightenment
 
 %build
 
-%configure  --enable-device-udev \
+%reconfigure  --enable-device-udev \
 	    --enable-mount-eeze  \
         --enable-comp
 make %{?_smp_mflags}
